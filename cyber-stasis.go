@@ -417,7 +417,7 @@ func (p *pubsub) Render() app.UI {
 							app.Details().Class("how-to-play").Body(
 								app.Summary().Class("accordion").Text("Github"),
 								app.Div().Body(
-									app.A().Href("#").Text("put github link here"),
+									app.A().Href("https://github.com/stateless-minds/cyber-stasis").Text("https://github.com/stateless-minds/cyber-stasis"),
 								),
 							),
 							app.Details().Class("how-to-play").Body(
