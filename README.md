@@ -2,8 +2,6 @@
 
 ![Logo](./assets/logo.png)
 
-<a href="http://bafybeie632s6clsszrr5r2dd5hua4akdzz6bm24zsorlfgcwlfjvn3kwnq.ipfs.localhost:8080/">View Demo</a>
-
 Cyber Stasis is an economic simulator in the form of a fictional game based on global real-time demand and supply.
 
 ## How to Play
