@@ -372,7 +372,7 @@ func (p *pubsub) Render() app.UI {
 								),
 							),
 							app.Details().Class("how-to-play").Body(
-								app.Summary().Class("accordion").Text("Credits"),
+								app.Summary().Class("accordion").Text("Acknowledgments"),
 								app.Div().Body(
 									app.Ol().Class("list-group list-group-numbered").Body(
 										app.Li().Class("list-group-item d-flex justify-content-between align-items-start").Body(

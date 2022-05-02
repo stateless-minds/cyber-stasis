@@ -292,7 +292,7 @@ a {
 
 a:hover {
 	box-shadow: 0 3px 0 0;
-	color: transparent!important;
+	/* color: transparent!important; */
 }
 
 code {
