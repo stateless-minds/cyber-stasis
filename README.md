@@ -12,8 +12,8 @@ The game runs on the public IPFS network. In order to play it follow the steps b
 
 2. Clone https://github.com/stateless-minds/go-ipfs to your local machine, build it with `make build` and run it with the following command: `~/cmd/ipfs/ipfs daemon --enable-pubsub-experiment`
 
-3. Follow the instructions here to open your config file: https://github.com/ipfs/go-ipfs/blob/master/docs/config.md. Usually it's `~/.ipfs/config` on Linux. Add the <a href="http://bafybeibz4qdtifprtwty3zgiymjje4h5q6m4omyvg3ulomnpj26rboskxy.ipfs.localhost:8080/">APP URL</a> to the `Access-Control-Allow-Origin` list
-4. Navigate to <a href="http://bafybeibz4qdtifprtwty3zgiymjje4h5q6m4omyvg3ulomnpj26rboskxy.ipfs.localhost:8080/">APP URL</a> and enjoy
+3. Follow the instructions here to open your config file: https://github.com/ipfs/go-ipfs/blob/master/docs/config.md. Usually it's `~/.ipfs/config` on Linux. Add the <a href="http://bafybeibg5z66bi5tvbhg3wrd5plfqm7gw6pwdretpmzl3haono6a2xbzsm.ipfs.localhost:8080/">APP URL</a> to the `Access-Control-Allow-Origin` list
+4. Navigate to <a href="http://bafybeibg5z66bi5tvbhg3wrd5plfqm7gw6pwdretpmzl3haono6a2xbzsm.ipfs.localhost:8080/">APP URL</a> and enjoy
 
 ## Screenshots
 
