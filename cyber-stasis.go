@@ -513,7 +513,7 @@ func (p *pubsub) Render() app.UI {
 							if p.categories[i] == "all" {
 								return app.Option().Selected(true).Value("").Text("Select Category")
 							} else {
-								return app.Option().Value("water").Text(strings.Title(p.categories[i]))
+								return app.Option().Value(p.categories[i]).Text(strings.Title(p.categories[i]))
 							}
 						}),
 					).Required(true).OnClick(p.onSelect),
