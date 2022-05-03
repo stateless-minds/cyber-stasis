@@ -140,12 +140,10 @@ func (p *pubsub) OnMount(ctx app.Context) {
 	}
 
 	citizenID := myPeer.ID[len(myPeer.ID)-8:]
-	//password
+	// replace password with your own
 	password := "mysecretpassword"
 
 	p.citizenID = mixer.EncodeString(password, citizenID)
-
-	citizenID = mixer.DecodeString(password, p.citizenID)
 
 	p.subscribe(ctx)
 	p.demandRequests = make(map[string]demandRequest)
