@@ -8,7 +8,7 @@ Cyber Stasis is an economic simulator in the form of a fictional game based on g
 
 The game runs on the public IPFS network. In order to play it follow the steps below:
 
-1. Install the official IPFS Desktop http://docs.ipfs.io.ipns.localhost:8080/install/ipfs-desktop/
+1. Install the official IPFS Desktop http://docs.ipfs.io/install/ipfs-desktop/
 
 2. Clone https://github.com/stateless-minds/go-ipfs to your local machine, build it with `make build` and run it with the following command: `~/cmd/ipfs/ipfs daemon --enable-pubsub-experiment`
 
