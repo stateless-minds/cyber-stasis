@@ -2,18 +2,17 @@
 
 ![Logo](./assets/logo.png)
 
-Cyber Stasis is an economic simulator in the form of a fictional game based on global real-time demand and supply.
+Cyber Stasis is an economic simulator in the form of a free fictional game based on global real-time demand and supply.
 
 ## How to Play
 
 The game runs on the public IPFS network. In order to play it follow the steps below:
 
 1. Install the official IPFS Desktop http://docs.ipfs.io/install/ipfs-desktop/
-
-2. Clone https://github.com/stateless-minds/go-ipfs to your local machine, build it with `make build` and run it with the following command: `~/cmd/ipfs/ipfs daemon --enable-pubsub-experiment`
-
-3. Follow the instructions here to open your config file: https://github.com/ipfs/go-ipfs/blob/master/docs/config.md. Usually it's `~/.ipfs/config` on Linux. Add the <a href="https://ipfs.io/ipfs/QmQxd8Drsg5bvwqk3BbVmmNuouiJn9DdLY65717wWkLUxA">APP URL</a> to the `Access-Control-Allow-Origin` list
-4. Navigate to <a href="https://ipfs.io/ipfs/QmQxd8Drsg5bvwqk3BbVmmNuouiJn9DdLY65717wWkLUxA">APP URL</a> and let's simulate the future together!
+2. Install IPFS Companion http://docs.ipfs.io.ipns.localhost:8080/install/ipfs-companion/
+3.  Clone https://github.com/stateless-minds/go-ipfs to your local machine, build it with `make build` and run it with the following command: `~/cmd/ipfs/ipfs daemon --enable-pubsub-experiment`
+4.  Follow the instructions here to open your config file: https://github.com/ipfs/go-ipfs/blob/master/docs/config.md. Usually it's `~/.ipfs/config` on Linux. Add the <a href="https://ipfs.io/ipfs/QmQxd8Drsg5bvwqk3BbVmmNuouiJn9DdLY65717wWkLUxA">APP URL</a> to the `Access-Control-Allow-Origin` list
+5.  Navigate to <a href="https://ipfs.io/ipfs/QmQxd8Drsg5bvwqk3BbVmmNuouiJn9DdLY65717wWkLUxA">APP URL</a> and let's simulate the future together!
 
 ## Screenshots
 
