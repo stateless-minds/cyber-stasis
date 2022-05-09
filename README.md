@@ -14,6 +14,8 @@ The game runs on the public IPFS network. In order to play it follow the steps b
 4.  Follow the instructions here to open your config file: https://github.com/ipfs/go-ipfs/blob/master/docs/config.md. Usually it's `~/.ipfs/config` on Linux. Add the <a href="https://ipfs.io/ipfs/QmQxd8Drsg5bvwqk3BbVmmNuouiJn9DdLY65717wWkLUxA">APP URL</a> to the `Access-Control-Allow-Origin` list
 5.  Navigate to <a href="https://ipfs.io/ipfs/QmQxd8Drsg5bvwqk3BbVmmNuouiJn9DdLY65717wWkLUxA">APP URL</a> and let's simulate the future together!
 
+Please note the game has been developed on a WQHD resolution(2560x1440) and is currently not responsive or optimized for mobile devices.
+
 ## Screenshots
 
 <a display="inline" href="./assets/home.png?raw=true">
@@ -31,6 +33,10 @@ The game runs on the public IPFS network. In order to play it follow the steps b
 <a display="inline" href="./assets/mission.png?raw=true">
 <img src="./assets/mission.png" width="45%" alt="Screenshot of the mission" title="Screenshot of the mission">
 </a>
+
+## Roadmap
+1. Make it responsive - Not started
+2. Make it mobile friendly - Not started. It will require a very different approach with a different client: https://berty.tech/docs/gomobile-ipfs/
 
 ## Acknowledgments
 
