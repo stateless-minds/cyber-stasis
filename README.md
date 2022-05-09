@@ -14,7 +14,7 @@ The game runs on the public IPFS network. In order to play it follow the steps b
 4.  Follow the instructions here to open your config file: https://github.com/ipfs/go-ipfs/blob/master/docs/config.md. Usually it's `~/.ipfs/config` on Linux. Add the <a href="https://ipfs.io/ipfs/QmQxd8Drsg5bvwqk3BbVmmNuouiJn9DdLY65717wWkLUxA">APP URL</a> to the `Access-Control-Allow-Origin` list
 5.  Navigate to <a href="https://ipfs.io/ipfs/QmQxd8Drsg5bvwqk3BbVmmNuouiJn9DdLY65717wWkLUxA">APP URL</a> and let's simulate the future together!
 
-Please note the game has been developed on a WQHD resolution(2560x1440) and is currently not responsive or optimized for mobile devices.
+Please note the game has been developed on a WQHD resolution(2560x1440) and is currently not responsive or optimized for mobile devices. For best gaming experience if you play in FHD(1920x1080) please set your browser zoom settings to 150%.
 
 ## Screenshots
 
