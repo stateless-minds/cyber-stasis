@@ -3,6 +3,7 @@
 ![Logo](./assets/logo.png)
 
 Cyber Stasis is an economic simulator in the form of a free fictional game based on global real-time demand and supply.
+It's a pure market system focused on efficiency of distribution. Everything that we measure with money can be measured by a ratio between supply and demand. The goal of the system is to make sure that all needs are met to the best extent possible. There is a personal reputation index based on that which measures your contributions to society.
 
 ## How to Play
 
@@ -15,6 +16,19 @@ The game runs on the public IPFS network. In order to play it follow the steps b
 5.  Navigate to <a href="https://ipfs.io/ipfs/QmQxd8Drsg5bvwqk3BbVmmNuouiJn9DdLY65717wWkLUxA">APP URL</a> and let's simulate the future together!
 
 Please note the game has been developed on a WQHD resolution(2560x1440) and is currently not responsive or optimized for mobile devices. For best gaming experience if you play in FHD(1920x1080) please set your browser zoom settings to 150%.
+
+## Guidelines
+
+* **Economic simulator** - Cyber Stasis is an economic simulator in the form of a fictional game based on global real-time demand and supply.
+* **Real-time demand/supply graph** - The graph reflects all demand and supply requests and is updated in real-time.
+* **Supply can be sent only in response to an existing demand** - Send only goods and services you can provide in real life.
+* **Keep it real** - Send requests for your real daily needs to make the whole simulation as accurate as possible.
+* **Global events** - When the supply/demand ratio drops below certain thresholds global events are triggered and sent as notifications such as global shortage of water, food and housing.
+* **Do what you do in real life** - Ask for things you need and supply things you provide.
+* **Rankings** - Rankings reflect the level of contribution and usefulness of members to society. They take all factors into account and are calculated by a formula. The Reputation Index is the score in the game. Provide more than you consume and become the most valuable member of society!
+* **No collection of user data** - Cyber Stasis does not collect any personal user data.
+* **User generated content is fictional** - All user generated content is fictional and creators are responsibile for it.
+* **If you like it support it** - This is an open source community project. Feel free to improve it or fork it and use it for your projects. Donations are welcome.
 
 ## Screenshots
 
