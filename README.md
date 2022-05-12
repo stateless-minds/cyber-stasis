@@ -2,7 +2,7 @@
 
 ![Logo](./assets/logo.png)
 
-Cyber Stasis is an economic simulator in the form of a free fictional game based on global real-time demand and supply.
+Cyber Stasis is an economic simulator in the form of a free fictional game based on global real-time demand and supply. The game tests the hypothesis of having a market system without a monetary one. There is no private property and a concept of wealth.
 It's a pure market system focused on efficiency of distribution. Everything that we measure with money can be measured by a ratio between supply and demand. The goal of the system is to make sure that all needs are met to the best extent possible. There is a personal reputation index based on that which measures your contributions to society.
 
 ## How to Play
