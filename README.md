@@ -2,8 +2,8 @@
 
 ![Logo](./assets/logo.png)
 
-Cyber Stasis is an economic simulator in the form of a free fictional game dashboard which coordinates global real-time demand and supply. The game is based on gift economy and tests the hypothesis of having a market system without a monetary one.
-The market system provides a feedback loop between production and consumption and delivers efficiency of distribution. There is no private property and a concept of wealth. Everything that we measure with money can be measured by a ratio between supply and demand. The goal of the system is to make sure that all needs are met to the best extent possible. There is a personal reputation index based on that which measures your contributions to society. The goal of the game is to become the most useful member of society. 
+Cyber Stasis is an economic simulator in the form of a free fictional game. The interface is a futuristic dashboard which coordinates global real-time demand and supply. The concept is based on gift economy and tests the hypothesis of having a market system without a monetary one.
+The market system provides a feedback loop between production and consumption and delivers efficiency of distribution. Everything that we measure with money can be measured by a ratio between supply and demand. There is no private property and a concept of wealth. The goal of the system is to make sure that all needs are met to the best extent possible. There is a personal reputation index based on that which measures your contributions to society. The goal of the game is to become the most useful member of society. 
 
 ## How to Play
 
