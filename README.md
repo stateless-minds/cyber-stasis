@@ -30,7 +30,7 @@ Please note the game has been developed on a WQHD resolution(2560x1440) and is c
 * **Do what you do in real life** - Ask for things you need and supply things you provide.
 * **Rankings** - Rankings reflect the level of contribution and usefulness of members to society. They take all factors into account and are calculated by a formula. The Reputation Index is the score in the game. Provide more than you consume and become the most valuable member of society!
 * **No collection of user data** - Cyber Stasis does not collect any personal user data.
-* **User generated content is fictional** - All user generated content is fictional and creators are responsibile for it.
+* **User generated content is fictional** - All user generated content is fictional and creators are not responsibile for it.
 * **If you like it support it** - This is an open source community project. Feel free to improve it or fork it and use it for your projects. Donations are welcome.
 
 ## Screenshots
