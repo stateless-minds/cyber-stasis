@@ -326,7 +326,7 @@ func (p *pubsub) Render() app.UI {
 										app.Li().Class("list-group-item d-flex justify-content-between align-items-start").Body(
 											app.Div().Class("ms-2 me-auto").Body(
 												app.Div().Class("fw-bold").Text("User generated content is fictional"),
-												app.Text("All user generated content is fictional and creators are responsibile for it."),
+												app.Text("All user generated content is fictional and creators are not responsibile for it."),
 											),
 										),
 										app.Li().Class("list-group-item d-flex justify-content-between align-items-start").Body(
@@ -437,7 +437,7 @@ func (p *pubsub) Render() app.UI {
 										app.Li().Class("list-group-item d-flex justify-content-between align-items-start").Body(
 											app.Div().Class("ms-2 me-auto").Body(
 												app.Div().Class("fw-bold").Text("User-Generated Content"),
-												app.Text("All published content is user-generated, fictional and creators are solely responsible for it."),
+												app.Text("All published content is user-generated, fictional and creators are not responsible for it."),
 											),
 										),
 									),
