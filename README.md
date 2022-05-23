@@ -12,9 +12,18 @@ The game runs on the public IPFS network. In order to play it follow the steps b
 1. Install the official IPFS Desktop http://docs.ipfs.io/install/ipfs-desktop/
 2. Install IPFS Companion http://docs.ipfs.io/install/ipfs-companion/
 3.  Clone https://github.com/stateless-minds/go-ipfs to your local machine, build it with `make build` and run it with the following command: `~/cmd/ipfs/ipfs daemon --enable-pubsub-experiment`
-4.  Follow the instructions here to open your config file: https://github.com/ipfs/go-ipfs/blob/master/docs/config.md. Usually it's `~/.ipfs/config` on Linux. Add the <a href="https://ipfs.io/ipfs/QmQxd8Drsg5bvwqk3BbVmmNuouiJn9DdLY65717wWkLUxA">APP URL</a> to the `Access-Control-Allow-Origin` list
-5.  Navigate to <a href="https://ipfs.io/ipfs/QmQxd8Drsg5bvwqk3BbVmmNuouiJn9DdLY65717wWkLUxA">APP URL</a> and let's simulate the future together!
-6.  If you like the game consider pinning it to your local node so that you become a permanent host of it while you have IPFS daemon running
+4.  Follow the instructions here to open your config file: https://github.com/ipfs/go-ipfs/blob/master/docs/config.md. Usually it's `~/.ipfs/config` on Linux. Add the following snippet to the `HTTPHeaders`:
+```{
+  "API": {
+    "HTTPHeaders": {
+      "Access-Control-Allow-Origin": ["webui://-", "http://localhost:3000", "http://bafybeid6xrjkqbpdscmyu4esqyeyul5qit6tplvvaif7db6hreqmftsxvq.ipfs.localhost:8080", "http://127.0.0.1:5001", "https://webui.ipfs.io"],
+      "Access-Control-Allow-Credentials": ["true"],
+      "Access-Control-Allow-Methods": ["PUT", "POST"]
+    }
+  },
+ ```
+6.  Navigate to <a href="https://ipfs.io/ipfs/QmWsNdgDCayEaGB69Xpm8UhkaxUrx7ZfEXkMmKPeiteD63">https://ipfs.io/ipfs/QmWsNdgDCayEaGB69Xpm8UhkaxUrx7ZfEXkMmKPeiteD63</a> and let's simulate the future together!
+7.  If you like the game consider pinning it to your local node so that you become a permanent host of it while you have IPFS daemon running
 ![SetPinning](./assets/pin.png)
 ![PinToLocalNode](./assets/pin-to-local-node.png)
 
