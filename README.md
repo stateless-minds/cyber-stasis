@@ -3,7 +3,7 @@
 ![Logo](./assets/logo.png)
 
 Cyber Stasis is an economic simulator in the form of a free fictional game. The interface is a futuristic dashboard which coordinates global real-time demand and supply. The model is based on gift economy and tests the hypothesis of having a market system without any type of exchange be it barters or monetary transactions.
-The market system provides a feedback loop between production and consumption and is oriented towards efficiency of distribution. Everything that we measure with money can be measured by a ratio between supply and demand. There is no private property and a concept of wealth. The goal of the system is to make sure that all needs are met to the best extent possible. There is a personal reputation index based on that which measures your contributions to society. The goal of the game is to become the most useful member of society. 
+The market system provides a feedback loop between production and consumption and is oriented towards efficiency of distribution. Everything that we measure with money can be measured by a ratio between supply and demand. There is no private property and a concept of wealth. The goal of the system is to make sure that all needs are met to the best extent possible. There is a personal reputation index which measures your contributions to society but it does not give any privileges. The goal of the game is to become the most useful member of society.
 
 ## How to Play
 
