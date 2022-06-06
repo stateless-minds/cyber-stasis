@@ -63,6 +63,7 @@ Please note the game has been developed on a WQHD resolution(2560x1440) and is c
 ## Roadmap
 1. Make it responsive - Not started
 2. Make it mobile friendly - Not started. It will require a very different approach with a different client: https://berty.tech/docs/gomobile-ipfs/
+3. Add a direct democracy voting system to the simulator so that we can combine economics and politics in all-in-one solution. For reference why it's needed see: https://www.reddit.com/r/CyberStasis/comments/uvixbz/possible_future_scenarios_and_implications_of_a/
 
 ## Acknowledgments
 
