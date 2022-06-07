@@ -63,7 +63,7 @@ Please note the game has been developed on a WQHD resolution(2560x1440) and is c
 ## Roadmap
 1. Make it responsive - Not started
 2. Make it mobile friendly - Not started. It will require a very different approach with a different client: https://berty.tech/docs/gomobile-ipfs/
-3. Create a direct democracy simulator that integrates seamlessly with the economy simulator.: https://www.reddit.com/r/CyberStasis/comments/uvixbz/possible_future_scenarios_and_implications_of_a/
+3. Create a direct democracy voting system that integrates seamlessly with the economy simulator.: https://www.reddit.com/r/CyberStasis/comments/uvixbz/possible_future_scenarios_and_implications_of_a/
 4. Create media platform where people can publish their own news instead of relying on mass media and seamlessly integrate it with the economy simulator: https://www.reddit.com/r/CyberStasis/comments/uvixbz/possible_future_scenarios_and_implications_of_a/
 
 ## Acknowledgments
