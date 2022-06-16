@@ -11,7 +11,7 @@ The game runs on the public IPFS network. In order to play it follow the steps b
 
 1. Install the official IPFS Desktop http://docs.ipfs.io/install/ipfs-desktop/
 2. Install IPFS Companion http://docs.ipfs.io/install/ipfs-companion/
-3. Install golang - https://go.dev/doc/install
+3. Install golang 1.17 or later version - https://go.dev/doc/install
 4.  Clone https://github.com/stateless-minds/go-ipfs to your local machine
 ```
 git clone https://github.com/stateless-minds/go-ipfs.git
