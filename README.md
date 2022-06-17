@@ -30,7 +30,7 @@ git clone https://github.com/stateless-minds/go-ipfs.git
 ``` 
 cd go-ipfs
 make build
-~/cmd/ipfs/ipfs daemon --enable-pubsub-experiment
+./cmd/ipfs/ipfs daemon --enable-pubsub-experiment
 ```
 7.  Navigate to <a href="https://ipfs.io/ipfs/QmWsNdgDCayEaGB69Xpm8UhkaxUrx7ZfEXkMmKPeiteD63">https://ipfs.io/ipfs/QmWsNdgDCayEaGB69Xpm8UhkaxUrx7ZfEXkMmKPeiteD63</a> and let's simulate the future together!
 8.  If you like the game consider pinning it to your local node so that you become a permanent host of it while you have IPFS daemon running
