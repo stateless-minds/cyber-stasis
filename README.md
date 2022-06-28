@@ -75,7 +75,7 @@ Please note the game has been developed on a WQHD resolution(2560x1440) and is c
 2. Make it mobile friendly - Not started. It will require a very different approach with a different client: https://berty.tech/docs/gomobile-ipfs/
 
 ## Ideas
-1. Create a direct democracy voting system that integrates seamlessly with the economy simulator.: https://www.reddit.com/r/CyberStasis/comments/uvixbz/possible_future_scenarios_and_implications_of_a/
+1. Create a liquid democracy voting system that integrates seamlessly with the economy simulator.: https://www.reddit.com/r/CyberStasis/comments/uvixbz/possible_future_scenarios_and_implications_of_a/
 2. Create media platform where people can publish their own news instead of relying on mass media and seamlessly integrate it with the economy simulator: https://www.reddit.com/r/CyberStasis/comments/uvixbz/possible_future_scenarios_and_implications_of_a/
 3. Add resources available data fetched from external public APIs and keep track of it during production/consumption cycles
 
