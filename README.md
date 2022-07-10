@@ -81,7 +81,7 @@ Please note the game has been developed on a WQHD resolution(2560x1440) and is c
 
 ## Inspirations
 1. Auroville
-https://auroville-learning.net
+https://auroville.org
 2. CyberSyn
 https://en.wikipedia.org/wiki/Project_Cybersyn
 3. The Venus Project
