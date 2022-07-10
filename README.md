@@ -79,6 +79,16 @@ Please note the game has been developed on a WQHD resolution(2560x1440) and is c
 2. Create media platform where people can publish their own news instead of relying on mass media and seamlessly integrate it with the economy simulator: https://www.reddit.com/r/CyberStasis/comments/uvixbz/possible_future_scenarios_and_implications_of_a/
 3. Add resources available data fetched from external public APIs and keep track of it during production/consumption cycles
 
+## Inspirations
+1. Auroville
+https://auroville-learning.net
+2. CyberSyn
+https://en.wikipedia.org/wiki/Project_Cybersyn
+3. The Venus Project
+https://www.thevenusproject.com
+4. OGAS
+https://en.wikipedia.org/wiki/OGAS
+
 ## Acknowledgments
 
 1. <a href="https://go-app.dev/">go-app</a>
