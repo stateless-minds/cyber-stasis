@@ -4,7 +4,7 @@
 
 ## What's the problem with money anyway?
 
-Money has the inherent property to accumulate. As such the end game is always a monopoly. At that point it loses its main use for exchange and a store of value and becomes a political power tool for control. Also due to the fact that money is not tied to personal limitations it can be used for exploitation of other people through the creation of a pyramid system.
+https://github.com/stateless-minds/cyber-stasis/wiki/What-is-the-problem-with-money%3F
 
 ## What is moneyless economy
 
