@@ -2,7 +2,7 @@
 
 ![Logo](./assets/logo.png)
 
-## What's the problem with money anyway?
+## What's the problem with money?
 
 https://github.com/stateless-minds/cyber-stasis/wiki/What-is-the-problem-with-money%3F
 
