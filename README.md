@@ -2,6 +2,12 @@
 
 ![Logo](./assets/logo.png)
 
+## What's the problem with money anyway?
+
+Money has the inherent property to accumulate. As such the end game is always a monopoly. At that point it loses its main use for exchange and a store of value and becomes a political power tool for control. Also due to the fact that money is not tied to personal limitations it can be used for exploitation of other people through the creation of a pyramid system.
+
+
+
 Cyber Stasis is an economic simulator in the form of a free fictional game. The interface is a futuristic dashboard which coordinates global real-time demand and supply. The model is based on gift economy and tests the hypothesis of having a market system without any type of exchange be it barters or money.
 The market system provides a feedback loop between production and consumption and is oriented towards efficiency of distribution. Everything that we measure with money can be measured by a ratio between supply and demand. There is no private property and a concept of wealth. Everyone is connected anonymously to prevent forming of alliances and cartels. The goal of the system is to make sure that all needs are met to the best extent possible. There is a personal reputation index which measures your contributions to society but it does not give any privileges. The goal of the game is to become the most useful member of society.
 
