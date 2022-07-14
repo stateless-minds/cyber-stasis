@@ -6,7 +6,7 @@
 
 https://github.com/stateless-minds/cyber-stasis/wiki/What-is-the-problem-with-money%3F
 
-## What moneyless economy is
+## Moneyless market economy
 
 https://github.com/stateless-minds/cyber-stasis/wiki/What-is-moneyless-economy-and-what-it-isn't
 
