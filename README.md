@@ -2,11 +2,11 @@
 
 ![Logo](./assets/logo.png)
 
-## What's the problem with money
+## The problem with money
 
 https://github.com/stateless-minds/cyber-stasis/wiki/What-is-the-problem-with-money%3F
 
-## What is moneyless economy
+## What moneyless economy is
 
 https://github.com/stateless-minds/cyber-stasis/wiki/What-is-moneyless-economy-and-what-it-isn't
 
