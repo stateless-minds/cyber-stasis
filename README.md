@@ -18,7 +18,7 @@ The market system provides a feedback loop between production and consumption an
 A lot of people have a hard time imagining what changes and what is not.
 
 Here is a practical example:
-You go to work and do what you do. You get what you usually buy. You just don't exchange money for all those activities.
+You go to work and do what you do. You get what you usually buy. You just don't exchange money for all those activities. All that based on the assumption that we switched from ownership economy to usage economy.
 
 Corps transform into coops and life goes on as usual. Except you are no longer forced to work and can choose to do what you like or even change your activities ever so often.
 
