@@ -2,8 +2,29 @@
 
 ![Logo](./assets/logo.png)
 
-Cyber Stasis is an economic simulator in the form of a free fictional game based on global real-time demand and supply. The game tests the hypothesis of having a market system without a monetary one. There is no private property and a concept of wealth.
-It's a pure market system focused on efficiency of distribution. Everything that we measure with money can be measured by a ratio between supply and demand. The goal of the system is to make sure that all needs are met to the best extent possible. There is a personal reputation index based on that which measures your contributions to society. The goal of the game is to become the most useful member of society. 
+## The problem with money
+
+https://github.com/stateless-minds/cyber-stasis/wiki/What-is-the-problem-with-money%3F
+
+## Moneyless market economy
+
+https://github.com/stateless-minds/cyber-stasis/wiki/What-is-moneyless-economy-and-what-it-isn't
+
+Cyber Stasis is an economic simulator in the form of a free fictional game. The interface is a futuristic dashboard which coordinates global real-time demand and supply. The model is based on gift economy and tests the hypothesis of having a market system without any type of exchange be it barters or money.
+The market system provides a feedback loop between production and consumption and is oriented towards efficiency of distribution. Everything that we measure with money can be measured by a ratio between supply and demand. There is no private property and a concept of wealth. Everyone is connected anonymously to prevent forming of alliances and cartels. The goal of the system is to make sure that all needs are met to the best extent possible. There is a personal reputation index which measures your contributions to society but it does not give any privileges. The goal of the game is to become the most useful member of society.
+
+## How does it look in real life though?
+
+A lot of people have a hard time imagining what changes and what is not.
+
+Here is a practical example:
+You go to work and do what you do. You get what you usually buy. You just don't exchange money for all those activities. All that based on the assumption that we switched from ownership economy to usage economy.
+
+Corps transform into coops and life goes on as usual. Except you are no longer forced to work and can choose to do what you like or even change your activities ever so often.
+
+## Community
+
+https://www.reddit.com/r/CyberStasis/
 
 ## How to Play
 
@@ -11,8 +32,12 @@ The game runs on the public IPFS network. In order to play it follow the steps b
 
 1. Install the official IPFS Desktop http://docs.ipfs.io/install/ipfs-desktop/
 2. Install IPFS Companion http://docs.ipfs.io/install/ipfs-companion/
-3.  Clone https://github.com/stateless-minds/go-ipfs to your local machine, build it with `make build` and run it with the following command: `~/cmd/ipfs/ipfs daemon --enable-pubsub-experiment`
-4.  Follow the instructions here to open your config file: https://github.com/ipfs/go-ipfs/blob/master/docs/config.md. Usually it's `~/.ipfs/config` on Linux. Add the following snippet to the `HTTPHeaders`:
+3. Install golang 1.17 or later version - https://go.dev/doc/install
+4.  Clone https://github.com/stateless-minds/go-ipfs to your local machine
+```
+git clone https://github.com/stateless-minds/go-ipfs.git
+```
+5.  Follow the instructions here to open your config file: https://github.com/ipfs/go-ipfs/blob/master/docs/config.md. Usually it's `~/.ipfs/config` on Linux. Add the following snippet to the `HTTPHeaders`:
 ```{
   "API": {
     "HTTPHeaders": {
@@ -22,8 +47,14 @@ The game runs on the public IPFS network. In order to play it follow the steps b
     }
   },
  ```
-6.  Navigate to <a href="https://ipfs.io/ipfs/QmWsNdgDCayEaGB69Xpm8UhkaxUrx7ZfEXkMmKPeiteD63">https://ipfs.io/ipfs/QmWsNdgDCayEaGB69Xpm8UhkaxUrx7ZfEXkMmKPeiteD63</a> and let's simulate the future together!
-7.  If you like the game consider pinning it to your local node so that you become a permanent host of it while you have IPFS daemon running
+6. Build it and start the daemon:
+``` 
+cd go-ipfs
+make build
+./cmd/ipfs/ipfs daemon --enable-pubsub-experiment
+```
+7.  Navigate to <a href="https://ipfs.io/ipfs/QmWsNdgDCayEaGB69Xpm8UhkaxUrx7ZfEXkMmKPeiteD63">https://ipfs.io/ipfs/QmWsNdgDCayEaGB69Xpm8UhkaxUrx7ZfEXkMmKPeiteD63</a> and let's simulate the future together!
+8.  If you like the game consider pinning it to your local node so that you become a permanent host of it while you have IPFS daemon running
 ![SetPinning](./assets/pin.png)
 ![PinToLocalNode](./assets/pin-to-local-node.png)
 
@@ -63,6 +94,21 @@ Please note the game has been developed on a WQHD resolution(2560x1440) and is c
 ## Roadmap
 1. Make it responsive - Not started
 2. Make it mobile friendly - Not started. It will require a very different approach with a different client: https://berty.tech/docs/gomobile-ipfs/
+
+## Ideas
+1. Create a liquid democracy voting system that integrates seamlessly with the economy simulator.: https://www.reddit.com/r/CyberStasis/comments/uvixbz/possible_future_scenarios_and_implications_of_a/
+2. Create media platform where people can publish their own news instead of relying on mass media and seamlessly integrate it with the economy simulator: https://www.reddit.com/r/CyberStasis/comments/uvixbz/possible_future_scenarios_and_implications_of_a/
+3. Add resources available data fetched from external public APIs and keep track of it during production/consumption cycles
+
+## Inspirations
+1. Auroville
+https://auroville.org
+2. CyberSyn
+https://en.wikipedia.org/wiki/Project_Cybersyn
+3. The Venus Project
+https://www.thevenusproject.com
+4. OGAS
+https://en.wikipedia.org/wiki/OGAS
 
 ## Acknowledgments
 
