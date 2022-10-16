@@ -5,8 +5,8 @@ go 1.17
 require (
 	github.com/NYTimes/gziphandler v1.1.1
 	github.com/foolin/mixer v0.0.8
-	github.com/mar1n3r0/go-ipfs-api v0.3.8
 	github.com/maxence-charriere/go-app/v9 v9.4.1
+	github.com/stateless-minds/go-ipfs-api v0.3.8
 )
 
 require (
@@ -34,7 +34,6 @@ require (
 	github.com/multiformats/go-varint v0.0.6 // indirect
 	github.com/spacemonkeygo/spacelog v0.0.0-20180420211403-2296661a0572 // indirect
 	github.com/spaolacci/murmur3 v1.1.0 // indirect
-	github.com/stateless-minds/go-ipfs-api v0.3.8 // indirect
 	github.com/whyrusleeping/tar-utils v0.0.0-20201201191210-20a61371de5b // indirect
 	golang.org/x/crypto v0.0.0-20220427172511-eb4f295cb31f // indirect
 	golang.org/x/sys v0.0.0-20220422013727-9388b58f7150 // indirect
