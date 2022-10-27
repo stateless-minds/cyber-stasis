@@ -5,8 +5,8 @@ go 1.17
 require (
 	github.com/NYTimes/gziphandler v1.1.1
 	github.com/foolin/mixer v0.0.8
-	github.com/maxence-charriere/go-app/v9 v9.6.4
-	github.com/stateless-minds/go-ipfs-api v0.4.1
+	github.com/maxence-charriere/go-app/v9 v9.6.7
+	github.com/stateless-minds/go-ipfs-api v0.4.8
 )
 
 require (
@@ -25,6 +25,7 @@ require (
 	github.com/minio/blake2b-simd v0.0.0-20160723061019-3f5f724cb5b1 // indirect
 	github.com/minio/sha256-simd v1.0.0 // indirect
 	github.com/mitchellh/go-homedir v1.1.0 // indirect
+	github.com/mitchellh/mapstructure v1.5.0 // indirect
 	github.com/mr-tron/base58 v1.2.0 // indirect
 	github.com/multiformats/go-base32 v0.0.4 // indirect
 	github.com/multiformats/go-base36 v0.1.0 // indirect

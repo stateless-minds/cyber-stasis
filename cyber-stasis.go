@@ -16,8 +16,8 @@ import (
 	shell "github.com/stateless-minds/go-ipfs-api"
 )
 
-const dbAddressSupplyDemand = "/orbitdb/bafyreibe2lnmluj2y4byq6dnb4jbyxinvfbiz5lj7myasprln5pqtmcarm/demand_supply"
-const dbStoreType = "keyval"
+const dbAddressSupplyDemand = "/orbitdb/bafyreia6t57n2uyfgpwpjqsztoxiiluc5xwcidfrfulc4i2quyd65uhmpe/demand_supply"
+
 const (
 	Hour                                   = "hour"
 	Day                                    = "day"
@@ -1169,7 +1169,7 @@ func (p *pubsub) sendDemand(ctx app.Context, e app.Event) {
 			log.Fatal(err)
 		}
 		// store in orbit-db first
-		err = p.sh.OrbitKVPut(dbAddressSupplyDemand, dbStoreType, strconv.Itoa(p.demandRequest.ID), []byte(demand))
+		err = p.sh.OrbitKVPut(dbAddressSupplyDemand, strconv.Itoa(p.demandRequest.ID), []byte(demand))
 		if err != nil {
 			log.Fatal(err)
 		}
@@ -1209,7 +1209,7 @@ func (p *pubsub) sendSupply(ctx app.Context, e app.Event) {
 	}
 	ctx.Async(func() {
 		// store in orbit-db first
-		err = p.sh.OrbitKVPut(dbAddressSupplyDemand, dbStoreType, strconv.Itoa(d.ID), supply)
+		err = p.sh.OrbitKVPut(dbAddressSupplyDemand, strconv.Itoa(d.ID), supply)
 		if err != nil {
 			log.Fatal(err)
 		}
@@ -1242,7 +1242,7 @@ func (p *pubsub) checkUnsuppliedMessages(ctx app.Context) {
 func (p *pubsub) FetchAllRequests(ctx app.Context, e app.Event) {
 	ctx.Async(func() {
 		// query orbit-db
-		v, err := p.sh.OrbitKVGet(dbAddressSupplyDemand, dbStoreType, "all")
+		v, err := p.sh.OrbitKVGet(dbAddressSupplyDemand, "all")
 		if err != nil {
 			log.Fatal(err)
 		}
@@ -1515,7 +1515,7 @@ func (p *pubsub) updateRanks(ctx app.Context) {
 func (p *pubsub) deleteRequests(ctx app.Context, e app.Event) {
 	ctx.Async(func() {
 		// query orbit-db
-		err := p.sh.OrbitKVDelete(dbAddressSupplyDemand, dbStoreType, "all")
+		err := p.sh.OrbitKVDelete(dbAddressSupplyDemand, "all")
 		if err != nil {
 			log.Fatal(err)
 		}
@@ -1578,7 +1578,7 @@ func (p *pubsub) createDummyRequestHour(n, i, f, id int) {
 	time.Sleep(1 * time.Second)
 
 	// store in orbit-db first
-	err = p.sh.OrbitKVPut(dbAddressSupplyDemand, dbStoreType, strconv.Itoa(id), []byte(demand))
+	err = p.sh.OrbitKVPut(dbAddressSupplyDemand, strconv.Itoa(id), demand)
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -1630,7 +1630,7 @@ func (p *pubsub) createDummyRequestDay(n, i, f, id int) {
 	time.Sleep(1 * time.Second)
 
 	// store in orbit-db first
-	err = p.sh.OrbitKVPut(dbAddressSupplyDemand, dbStoreType, strconv.Itoa(id), []byte(demand))
+	err = p.sh.OrbitKVPut(dbAddressSupplyDemand, strconv.Itoa(id), demand)
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -1682,7 +1682,7 @@ func (p *pubsub) createDummyRequestWeek(n, i, f, id int) {
 	time.Sleep(1 * time.Second)
 
 	// store in orbit-db first
-	err = p.sh.OrbitKVPut(dbAddressSupplyDemand, dbStoreType, strconv.Itoa(id), []byte(demand))
+	err = p.sh.OrbitKVPut(dbAddressSupplyDemand, strconv.Itoa(id), demand)
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -1734,7 +1734,7 @@ func (p *pubsub) createDummyRequestMonth(n, i, f, id int) {
 	time.Sleep(1 * time.Second)
 
 	// store in orbit-db first
-	err = p.sh.OrbitKVPut(dbAddressSupplyDemand, dbStoreType, strconv.Itoa(id), []byte(demand))
+	err = p.sh.OrbitKVPut(dbAddressSupplyDemand, strconv.Itoa(id), demand)
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -1786,7 +1786,7 @@ func (p *pubsub) createDummyRequestYear(n, i, f, id int) {
 	time.Sleep(1 * time.Second)
 
 	// store in orbit-db first
-	err = p.sh.OrbitKVPut(dbAddressSupplyDemand, dbStoreType, strconv.Itoa(id), []byte(demand))
+	err = p.sh.OrbitKVPut(dbAddressSupplyDemand, strconv.Itoa(id), demand)
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -1825,7 +1825,7 @@ func (p *pubsub) createDummyRequestCustom(n, i, f, id int) {
 	time.Sleep(1 * time.Second)
 
 	// store in orbit-db first
-	err = p.sh.OrbitKVPut(dbAddressSupplyDemand, dbStoreType, strconv.Itoa(id), []byte(demand))
+	err = p.sh.OrbitKVPut(dbAddressSupplyDemand, strconv.Itoa(id), demand)
 	if err != nil {
 		log.Fatal(err)
 	}
