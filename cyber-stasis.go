@@ -19,6 +19,10 @@ import (
 const dbAddressSupplyDemand = "/orbitdb/bafyreia6t57n2uyfgpwpjqsztoxiiluc5xwcidfrfulc4i2quyd65uhmpe/demand_supply"
 
 const (
+	topicDemand   = "demand"
+	topicCritical = "critical"
+)
+const (
 	Hour                                   = "hour"
 	Day                                    = "day"
 	Week                                   = "week"
@@ -130,8 +134,7 @@ type demandRequest struct {
 }
 
 func (p *pubsub) OnMount(ctx app.Context) {
-	topic := "demand"
-	p.topic = topic
+	p.topic = topicDemand
 	sh := shell.NewShell("localhost:5001")
 	p.sh = sh
 	myPeer, err := p.sh.ID()
@@ -880,7 +883,7 @@ func (p *pubsub) Render() app.UI {
 								if t.Sub(p.demandRequests[strconv.Itoa(p.filteredRequests[i])].CreatedAt).Minutes() <= 10 {
 									if ratio/10 < 0.6 {
 										p.globalEvent = true
-										p.resource = p.demandRequests[strconv.Itoa(p.filteredRequests[i])].Category
+										p.resource = strings.ToLower(p.demandRequests[strconv.Itoa(p.filteredRequests[i])].Category)
 									}
 								}
 								top := 390 - int(ratio)*40
@@ -2055,7 +2058,10 @@ func (p *pubsub) subscription(ctx app.Context) {
 			p.resetChartDefaults()
 			p.updateRanks(ctx)
 			if p.globalEvent {
-				p.createNotification(ctx, NotificationDanger, "Global shortage on "+p.resource+"! ", "Please supply more "+p.resource+".")
+				header := "Global shortage of " + p.resource + "! "
+				msg := "Please supply more " + p.resource + "."
+				p.createNotification(ctx, NotificationDanger, header, msg)
+				p.sh.PubSubPublish(topicCritical, header)
 			}
 
 			p.checkUnsuppliedMessages(ctx)
