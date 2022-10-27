@@ -17,7 +17,7 @@ import (
 )
 
 const dbAddressSupplyDemand = "/orbitdb/bafyreia6t57n2uyfgpwpjqsztoxiiluc5xwcidfrfulc4i2quyd65uhmpe/demand_supply"
-
+const dbAddressCitizenReputation = "/orbitdb/bafyreide5xex6dwtdg45eserwx2ib2cjeqpfu4hcjnik26hzvl525rwqoy/citizen_reputation"
 const (
 	topicDemand   = "demand"
 	topicCritical = "critical"
@@ -109,6 +109,13 @@ type ranking struct {
 	demandRatio     float64 // number of personal demands compared to total
 	supplyRatio     float64 // number of personal supplies compared to total
 	reputationIndex float64 // supplyRatio compared to demandRatio
+}
+
+type citizenReputation struct {
+	ID              string  `json:"_id" validate:"uuid_rfc4122"`
+	Type            string  `json:"type" validate:"uuid_rfc4122"`
+	CitizenID       string  `json:"citizenId" validate:"uuid_rfc4122"`
+	ReputationIndex float64 `json:"reputationIndex" validate:"uuid_rfc4122"`
 }
 
 type sendRequest struct {
@@ -1511,6 +1518,29 @@ func (p *pubsub) updateRanks(ctx app.Context) {
 			if p.ranks[0].citizenID == p.citizenID {
 				p.createNotification(ctx, NotificationSuccess, "Well done!", "You are ranked number one!")
 			}
+		}
+
+		p.storeRanks(ctx)
+	})
+}
+
+func (p *pubsub) storeRanks(ctx app.Context) {
+	ctx.Async(func() {
+		cr := citizenReputation{}
+		for i, r := range p.ranks {
+			cr.ID = strconv.Itoa(i + 1)
+			cr.Type = "reputation"
+			cr.CitizenID = r.citizenID
+			cr.ReputationIndex = r.reputationIndex
+			crr, err := json.Marshal(cr)
+			if err != nil {
+				log.Fatal(err)
+			}
+			err = p.sh.OrbitDocsPut(dbAddressCitizenReputation, crr)
+			if err != nil {
+				log.Fatal(err)
+			}
+			time.Sleep(1 * time.Second)
 		}
 	})
 }
