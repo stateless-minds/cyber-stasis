@@ -41,7 +41,7 @@ git clone https://github.com/stateless-minds/go-ipfs.git
 ```{
   "API": {
     "HTTPHeaders": {
-      "Access-Control-Allow-Origin": ["webui://-", "http://localhost:3000", "http://bafybeid6xrjkqbpdscmyu4esqyeyul5qit6tplvvaif7db6hreqmftsxvq.ipfs.localhost:8080", "http://127.0.0.1:5001", "https://webui.ipfs.io"],
+      "Access-Control-Allow-Origin": ["webui://-", "http://localhost:3000", "http://bafybeidl3ode53s2imudu5y2khpalqv7hwbmmy4dezsf7a4depkvm2c2eu.ipfs.localhost:8080/", "http://127.0.0.1:5001", "https://webui.ipfs.io"],
       "Access-Control-Allow-Credentials": ["true"],
       "Access-Control-Allow-Methods": ["PUT", "POST"]
     }
@@ -53,7 +53,7 @@ cd go-ipfs
 make build
 ./cmd/ipfs/ipfs daemon --enable-pubsub-experiment
 ```
-7.  Navigate to <a href="https://ipfs.io/ipfs/QmWsNdgDCayEaGB69Xpm8UhkaxUrx7ZfEXkMmKPeiteD63">https://ipfs.io/ipfs/QmWsNdgDCayEaGB69Xpm8UhkaxUrx7ZfEXkMmKPeiteD63</a> and let's simulate the future together!
+7.  Navigate to <a href="https://ipfs.io/ipfs/QmVbgUuNz28nmMn63spZRydzDQneLewwUCGLtZGBnSEx8U">https://ipfs.io/ipfs/QmVbgUuNz28nmMn63spZRydzDQneLewwUCGLtZGBnSEx8U</a> and let's simulate the future together!
 8.  If you like the game consider pinning it to your local node so that you become a permanent host of it while you have IPFS daemon running
 ![SetPinning](./assets/pin.png)
 ![PinToLocalNode](./assets/pin-to-local-node.png)
