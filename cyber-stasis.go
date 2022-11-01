@@ -87,6 +87,11 @@ type pubsub struct {
 	resource                 string
 }
 
+type Shortage struct {
+	Category    string
+	Description string
+}
+
 type NotificationStatus string
 
 type notification struct {
@@ -148,6 +153,45 @@ func (p *pubsub) OnMount(ctx app.Context) {
 	if err != nil {
 		log.Fatal(err)
 	}
+
+	/*** Test sending critical messages from all categories ***/
+	// ctx.Async(func() {
+	// 	category := "housing"
+	// 	desc := "Global shortage of housing"
+	// 	s := Shortage{
+	// 		Category:    category,
+	// 		Description: desc,
+	// 	}
+	// 	shortage, err := json.Marshal(s)
+	// 	if err != nil {
+	// 		log.Fatal(err)
+	// 	}
+	// 	p.sh.PubSubPublish(topicCritical, string(shortage))
+	// 	time.Sleep(2 * time.Second)
+	// 	category = "water"
+	// 	desc = "Global shortage of water"
+	// 	s = Shortage{
+	// 		Category:    category,
+	// 		Description: desc,
+	// 	}
+	// 	shortage, err = json.Marshal(s)
+	// 	if err != nil {
+	// 		log.Fatal(err)
+	// 	}
+	// 	p.sh.PubSubPublish(topicCritical, string(shortage))
+	// 	time.Sleep(2 * time.Second)
+	// 	category = "food"
+	// 	desc = "Global shortage of food"
+	// 	s = Shortage{
+	// 		Category:    category,
+	// 		Description: desc,
+	// 	}
+	// 	shortage, err = json.Marshal(s)
+	// 	if err != nil {
+	// 		log.Fatal(err)
+	// 	}
+	// 	p.sh.PubSubPublish(topicCritical, string(shortage))
+	// })
 
 	citizenID := myPeer.ID[len(myPeer.ID)-8:]
 	// replace password with your own
@@ -2090,8 +2134,17 @@ func (p *pubsub) subscription(ctx app.Context) {
 			if p.globalEvent {
 				header := "Global shortage of " + p.resource + "! "
 				msg := "Please supply more " + p.resource + "."
+				category := p.resource
+				s := Shortage{
+					Category:    category,
+					Description: header,
+				}
+				shortage, err := json.Marshal(s)
+				if err != nil {
+					log.Fatal(err)
+				}
 				p.createNotification(ctx, NotificationDanger, header, msg)
-				p.sh.PubSubPublish(topicCritical, header)
+				p.sh.PubSubPublish(topicCritical, string(shortage))
 			}
 
 			p.checkUnsuppliedMessages(ctx)
