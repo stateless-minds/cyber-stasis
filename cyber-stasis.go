@@ -530,7 +530,7 @@ func (p *pubsub) Render() app.UI {
 				),
 				app.Button().Class("btn btn-outline-info mt-2").ID("submitDemand").Body(app.Text("Send Request")).OnClick(p.sendDemand).Disabled(true),
 				// app.Button().Class("btn btn-outline-secondary").ID("FetchAllRequests").Body(app.Text("Get Requests")).OnClick(p.FetchAllRequests),
-				app.Button().Class("btn btn-outline-warning").ID("dummydata").Body(app.Text("Dummy Data")).OnClick(p.dummyData),
+				// app.Button().Class("btn btn-outline-warning").ID("dummydata").Body(app.Text("Dummy Data")).OnClick(p.dummyData),
 				// app.Button().Class("btn btn-outline-danger").ID("deleteRequests").Body(app.Text("Delete Requests")).OnClick(p.deleteRequests),
 			),
 			app.Div().ID("secondary").Class("container").Body(
@@ -1009,7 +1009,7 @@ func (p *pubsub) onSelectPeriod(ctx app.Context, e app.Event) {
 	app.Window().Get("document").Call("querySelector", ".content").Get("classList").Call("remove", "running")
 	ctx.Async(func() {
 		// wait for rendering
-		time.Sleep(1 * time.Millisecond)
+		time.Sleep(500 * time.Millisecond)
 		ctx.Dispatch(func(ctx app.Context) {
 			// reset counters before re-render
 			p.resetChartDefaults()
@@ -1057,7 +1057,7 @@ func (p *pubsub) onSelectCategory(ctx app.Context, e app.Event) {
 	app.Window().Get("document").Call("querySelector", ".content").Get("classList").Call("remove", "running")
 	ctx.Async(func() {
 		// wait for rendering
-		time.Sleep(1 * time.Millisecond)
+		time.Sleep(500 * time.Millisecond)
 		ctx.Dispatch(func(ctx app.Context) {
 			// reset counters before re-render
 			p.resetChartDefaults()
@@ -1088,7 +1088,7 @@ func (p *pubsub) onSelectStats(ctx app.Context, e app.Event) {
 	app.Window().Get("document").Call("querySelector", ".content").Get("classList").Call("remove", "running")
 	ctx.Async(func() {
 		// wait for rendering
-		time.Sleep(1 * time.Millisecond)
+		time.Sleep(500 * time.Millisecond)
 		ctx.Dispatch(func(ctx app.Context) {
 			// reset counters before re-render
 			p.resetChartDefaults()
@@ -1540,7 +1540,7 @@ func (p *pubsub) storeRanks(ctx app.Context) {
 			if err != nil {
 				log.Fatal(err)
 			}
-			time.Sleep(1 * time.Second)
+			time.Sleep(2 * time.Second)
 		}
 	})
 }
