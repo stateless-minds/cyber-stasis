@@ -33,11 +33,11 @@ The game runs on the public IPFS network. In order to play it follow the steps b
 1. Install the official IPFS Desktop http://docs.ipfs.io/install/ipfs-desktop/
 2. Install IPFS Companion http://docs.ipfs.io/install/ipfs-companion/
 3. Install golang 1.17 or later version - https://go.dev/doc/install
-4.  Clone https://github.com/stateless-minds/go-ipfs to your local machine
+4.  Clone https://github.com/stateless-minds/kubo to your local machine
 ```
-git clone https://github.com/stateless-minds/go-ipfs.git
+git clone https://github.com/stateless-minds/kubo.git
 ```
-5.  Follow the instructions here to open your config file: https://github.com/ipfs/go-ipfs/blob/master/docs/config.md. Usually it's `~/.ipfs/config` on Linux. Add the following snippet to the `HTTPHeaders`:
+5.  Follow the instructions here to open your config file: https://github.com/ipfs/kubo/blob/master/docs/config.md. Usually it's `~/.ipfs/config` on Linux. Add the following snippet to the `HTTPHeaders`:
 ```{
   "API": {
     "HTTPHeaders": {
@@ -49,7 +49,7 @@ git clone https://github.com/stateless-minds/go-ipfs.git
  ```
 6. Build it and start the daemon:
 ``` 
-cd go-ipfs
+cd kubo
 make build
 ./cmd/ipfs/ipfs daemon --enable-pubsub-experiment
 ```
