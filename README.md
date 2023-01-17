@@ -17,6 +17,24 @@ The market system provides a feedback loop between production and consumption an
 
 Imagine replacing millions of marketplaces and platforms with a single p2p app where all supply and demand happens in real-time. No one owns the app, all users are anonymous and all data is public. All products are made by function and for reuse rather than for ownership and status showoff. All users are served from nearby public depos and the consumption cycle is - get, use, return, recycle. Because we have no brands and competition naturally there is no use for money. Every day we open up the everything app to request what we need for the day and to provide what we can. Thanks to rise in productivity and automation it is a true resource-based gift economy that both reduces work time and fulfills all demands better than money based systems where money is the limited resource which keeps us in the loop of artificial scarcity.
 
+## Screenshots
+
+<a display="inline" href="./assets/home.png?raw=true">
+<img src="./assets/home.png" width="45%" alt="Screenshot of the homepage" title="Screenshot of the homepage">
+</a>
+
+<a display="inline" href="./assets/ranks.png?raw=true">
+<img src="./assets/ranks.png" width="45%" alt="Screenshot of the ranks screen" title="Screenshot of the ranks screen">
+</a>
+
+<a display="inline" href="./assets/story.png?raw=true">
+<img src="./assets/story.png" width="45%" alt="Screenshot of the story" title="Screenshot of the story">
+</a>
+
+<a display="inline" href="./assets/mission.png?raw=true">
+<img src="./assets/mission.png" width="45%" alt="Screenshot of the mission" title="Screenshot of the mission">
+</a>
+
 ## Community
 
 https://www.reddit.com/r/CyberStasis/
@@ -67,24 +85,6 @@ Please note the game has been developed on a WQHD resolution(2560x1440) and is c
 * **No collection of user data** - Cyber Stasis does not collect any personal user data.
 * **User generated content is fictional** - All user generated content is fictional and creators are not responsibile for it.
 * **If you like it support it** - This is an open source community project. Feel free to improve it or fork it and use it for your projects. Donations are welcome.
-
-## Screenshots
-
-<a display="inline" href="./assets/home.png?raw=true">
-<img src="./assets/home.png" width="45%" alt="Screenshot of the homepage" title="Screenshot of the homepage">
-</a>
-
-<a display="inline" href="./assets/ranks.png?raw=true">
-<img src="./assets/ranks.png" width="45%" alt="Screenshot of the ranks screen" title="Screenshot of the ranks screen">
-</a>
-
-<a display="inline" href="./assets/story.png?raw=true">
-<img src="./assets/story.png" width="45%" alt="Screenshot of the story" title="Screenshot of the story">
-</a>
-
-<a display="inline" href="./assets/mission.png?raw=true">
-<img src="./assets/mission.png" width="45%" alt="Screenshot of the mission" title="Screenshot of the mission">
-</a>
 
 ## Roadmap
 1. Make it responsive - Not started
