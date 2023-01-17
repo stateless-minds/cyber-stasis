@@ -15,12 +15,7 @@ The market system provides a feedback loop between production and consumption an
 
 ## How does it look in real life though?
 
-A lot of people have a hard time imagining what changes and what is not.
-
-Here is a practical example:
-You go to work and do what you do. You get what you usually buy. You just don't exchange money for all those activities. All that based on the assumption that we switched from ownership economy to usage economy.
-
-Corps transform into coops and life goes on as usual. Except you are no longer forced to work and can choose to do what you like or even change your activities ever so often.
+Imagine replacing millions of marketplaces and platforms with a single p2p app where all supply and demand happens in real-time. No one owns the app, all users are anonymous and all data is public. All products are made by function and for reuse rather than for ownership and status showoff. All users are served from nearby public depos and the consumption cycle is - get, use, return, recycle. Because we have no brands and competition naturally there is no use for money. Every day we open up the everything app to request what we need for the day and to provide what we can. Thanks to rise in productivity and automation it is a true resource-based gift economy that both reduces work time and fulfills all demands better than money based systems where money is the limited resource which keeps us in the loop of artificial scarcity.
 
 ## Community
 
