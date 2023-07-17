@@ -6,18 +6,20 @@ import (
 	"fmt"
 	"log"
 	"math"
+	"net/http"
 	"sort"
 	"strconv"
 	"strings"
 	"time"
 
+	"github.com/NYTimes/gziphandler"
 	"github.com/foolin/mixer"
 	"github.com/maxence-charriere/go-app/v9/pkg/app"
 	shell "github.com/stateless-minds/go-ipfs-api"
 )
 
-const dbAddressSupplyDemand = "/orbitdb/bafyreia6t57n2uyfgpwpjqsztoxiiluc5xwcidfrfulc4i2quyd65uhmpe/demand_supply"
-const dbAddressCitizenReputation = "/orbitdb/bafyreide5xex6dwtdg45eserwx2ib2cjeqpfu4hcjnik26hzvl525rwqoy/citizen_reputation"
+const dbNameSupplyDemand = "demand_supply"
+const dbNameCitizenReputation = "citizen_reputation"
 const (
 	topicDemand   = "demand"
 	topicCritical = "critical"
@@ -1223,7 +1225,7 @@ func (p *pubsub) sendDemand(ctx app.Context, e app.Event) {
 			log.Fatal(err)
 		}
 		// store in orbit-db first
-		err = p.sh.OrbitKVPut(dbAddressSupplyDemand, strconv.Itoa(p.demandRequest.ID), []byte(demand))
+		err = p.sh.OrbitKVPut(dbNameSupplyDemand, strconv.Itoa(p.demandRequest.ID), []byte(demand))
 		if err != nil {
 			log.Fatal(err)
 		}
@@ -1263,7 +1265,7 @@ func (p *pubsub) sendSupply(ctx app.Context, e app.Event) {
 	}
 	ctx.Async(func() {
 		// store in orbit-db first
-		err = p.sh.OrbitKVPut(dbAddressSupplyDemand, strconv.Itoa(d.ID), supply)
+		err = p.sh.OrbitKVPut(dbNameSupplyDemand, strconv.Itoa(d.ID), supply)
 		if err != nil {
 			log.Fatal(err)
 		}
@@ -1296,7 +1298,7 @@ func (p *pubsub) checkUnsuppliedMessages(ctx app.Context) {
 func (p *pubsub) FetchAllRequests(ctx app.Context, e app.Event) {
 	ctx.Async(func() {
 		// query orbit-db
-		v, err := p.sh.OrbitKVGet(dbAddressSupplyDemand, "all")
+		v, err := p.sh.OrbitKVGet(dbNameSupplyDemand, "all")
 		if err != nil {
 			log.Fatal(err)
 		}
@@ -1580,7 +1582,7 @@ func (p *pubsub) storeRanks(ctx app.Context) {
 			if err != nil {
 				log.Fatal(err)
 			}
-			err = p.sh.OrbitDocsPut(dbAddressCitizenReputation, crr)
+			err = p.sh.OrbitDocsPut(dbNameCitizenReputation, crr)
 			if err != nil {
 				log.Fatal(err)
 			}
@@ -1592,7 +1594,7 @@ func (p *pubsub) storeRanks(ctx app.Context) {
 func (p *pubsub) deleteRequests(ctx app.Context, e app.Event) {
 	ctx.Async(func() {
 		// query orbit-db
-		err := p.sh.OrbitKVDelete(dbAddressSupplyDemand, "all")
+		err := p.sh.OrbitKVDelete(dbNameSupplyDemand, "all")
 		if err != nil {
 			log.Fatal(err)
 		}
@@ -1655,7 +1657,7 @@ func (p *pubsub) createDummyRequestHour(n, i, f, id int) {
 	time.Sleep(1 * time.Second)
 
 	// store in orbit-db first
-	err = p.sh.OrbitKVPut(dbAddressSupplyDemand, strconv.Itoa(id), demand)
+	err = p.sh.OrbitKVPut(dbNameSupplyDemand, strconv.Itoa(id), demand)
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -1707,7 +1709,7 @@ func (p *pubsub) createDummyRequestDay(n, i, f, id int) {
 	time.Sleep(1 * time.Second)
 
 	// store in orbit-db first
-	err = p.sh.OrbitKVPut(dbAddressSupplyDemand, strconv.Itoa(id), demand)
+	err = p.sh.OrbitKVPut(dbNameSupplyDemand, strconv.Itoa(id), demand)
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -1759,7 +1761,7 @@ func (p *pubsub) createDummyRequestWeek(n, i, f, id int) {
 	time.Sleep(1 * time.Second)
 
 	// store in orbit-db first
-	err = p.sh.OrbitKVPut(dbAddressSupplyDemand, strconv.Itoa(id), demand)
+	err = p.sh.OrbitKVPut(dbNameSupplyDemand, strconv.Itoa(id), demand)
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -1811,7 +1813,7 @@ func (p *pubsub) createDummyRequestMonth(n, i, f, id int) {
 	time.Sleep(1 * time.Second)
 
 	// store in orbit-db first
-	err = p.sh.OrbitKVPut(dbAddressSupplyDemand, strconv.Itoa(id), demand)
+	err = p.sh.OrbitKVPut(dbNameSupplyDemand, strconv.Itoa(id), demand)
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -1863,7 +1865,7 @@ func (p *pubsub) createDummyRequestYear(n, i, f, id int) {
 	time.Sleep(1 * time.Second)
 
 	// store in orbit-db first
-	err = p.sh.OrbitKVPut(dbAddressSupplyDemand, strconv.Itoa(id), demand)
+	err = p.sh.OrbitKVPut(dbNameSupplyDemand, strconv.Itoa(id), demand)
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -1902,7 +1904,7 @@ func (p *pubsub) createDummyRequestCustom(n, i, f, id int) {
 	time.Sleep(1 * time.Second)
 
 	// store in orbit-db first
-	err = p.sh.OrbitKVPut(dbAddressSupplyDemand, strconv.Itoa(id), demand)
+	err = p.sh.OrbitKVPut(dbNameSupplyDemand, strconv.Itoa(id), demand)
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -2160,4 +2162,55 @@ func enableButton() {
 
 func disableButton() {
 	app.Window().GetElementByID("submitDemand").Set("disabled", true)
+}
+
+// The main function is the entry point where the app is configured and started.
+// It is executed in 2 different environments: A client (the web browser) and a
+// server.
+func main() {
+	// The first thing to do is to associate the hello component with a path.
+	//
+	// This is done by calling the Route() function,  which tells go-app what
+	// component to display for a given path, on both client and server-side.
+	app.Route("/", &pubsub{})
+
+	// Once the routes set up, the next thing to do is to either launch the app
+	// or the server that serves the app.
+	//
+	// When executed on the client-side, the RunWhenOnBrowser() function
+	// launches the app,  starting a loop that listens for app events and
+	// executes client instructions. Since it is a blocking call, the code below
+	// it will never be executed.
+	//
+	// When executed on the server-side, RunWhenOnBrowser() does nothing, which
+	// lets room for server implementation without the need for precompiling
+	// instructions.
+	app.RunWhenOnBrowser()
+
+	// Finally, launching the server that serves the app is done by using the Go
+	// standard HTTP package.
+	//
+	// The Handler is an HTTP handler that serves the client and all its
+	// required resources to make it work into a web browser. Here it is
+	// configured to handle requests with a path that starts with "/".
+
+	withGz := gziphandler.GzipHandler(&app.Handler{
+		Name:        "pubsub",
+		Description: "A pubsub ipfs example",
+		Styles: []string{
+			"/web/app.css",
+			"https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css",
+			"https://use.fontawesome.com/releases/v6.2.0/css/all.css",
+		},
+		Scripts: []string{
+			"https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js",
+			"https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js",
+		},
+	})
+
+	http.Handle("/", withGz)
+
+	if err := http.ListenAndServe(":3000", nil); err != nil {
+		log.Fatal(err)
+	}
 }
