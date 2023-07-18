@@ -54,7 +54,7 @@ git clone https://github.com/stateless-minds/kubo.git
 ```{
   "API": {
     "HTTPHeaders": {
-      "Access-Control-Allow-Origin": ["webui://-", "http://localhost:3000", "http://bafybeidl3ode53s2imudu5y2khpalqv7hwbmmy4dezsf7a4depkvm2c2eu.ipfs.localhost:8080", "http://127.0.0.1:5001", "https://webui.ipfs.io"],
+      "Access-Control-Allow-Origin": ["webui://-", "http://localhost:3000", "http://k51qzi5uqu5dgxg5be41yci6sli2yj9bm69j361nh6vpkwm3xrbhpbchf853i4.ipns.localhost:8080", "http://127.0.0.1:5001", "https://webui.ipfs.io"],
       "Access-Control-Allow-Credentials": ["true"],
       "Access-Control-Allow-Methods": ["PUT", "POST"]
     }
@@ -66,7 +66,7 @@ cd kubo
 make build
 ./cmd/ipfs/ipfs daemon --enable-pubsub-experiment
 ```
-7.  Navigate to <a href="https://ipfs.io/ipfs/QmVbgUuNz28nmMn63spZRydzDQneLewwUCGLtZGBnSEx8U">https://ipfs.io/ipfs/QmVbgUuNz28nmMn63spZRydzDQneLewwUCGLtZGBnSEx8U</a> and let's simulate the future together!
+7.  Navigate to <a href="https://ipfs.io/ipns/k51qzi5uqu5dgxg5be41yci6sli2yj9bm69j361nh6vpkwm3xrbhpbchf853i4">Cyber Stasis</a> and let's simulate the future together!
 8.  If you like the game consider pinning it to your local node so that you become a permanent host of it while you have IPFS daemon running
 ![SetPinning](./assets/pin.png)
 ![PinToLocalNode](./assets/pin-to-local-node.png)
