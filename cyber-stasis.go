@@ -14,7 +14,7 @@ import (
 
 	"github.com/NYTimes/gziphandler"
 	"github.com/foolin/mixer"
-	"github.com/maxence-charriere/go-app/v9/pkg/app"
+	"github.com/maxence-charriere/go-app/v10/pkg/app"
 	shell "github.com/stateless-minds/go-ipfs-api"
 )
 
@@ -284,8 +284,8 @@ func (p *pubsub) Render() app.UI {
 		app.Script().Src("https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js").CrossOrigin("anonymous"),
 		app.Div().Class("square_box box_three"),
 		app.Div().Class("square_box box_four"),
-		app.If(len(p.notifications) > 0,
-			app.Section().Body(
+		app.If(len(p.notifications) > 0, func() app.UI {
+			return app.Section().Body(
 				app.Div().Class("container").Body(
 					app.Div().Class("row").Body(
 						app.Range(p.notifications).Map(func(s string) app.UI {
@@ -300,7 +300,8 @@ func (p *pubsub) Render() app.UI {
 						}),
 					),
 				),
-			)),
+			)
+		}),
 		app.H1().Class("pb-0 logo").Body(
 			app.Text("Cyber-Stasis"),
 			app.Details().Body(
@@ -537,9 +538,11 @@ func (p *pubsub) Render() app.UI {
 		),
 		app.Div().Class("container d-flex justify-content-center pb-5").Body(
 			app.Div().Class("card").Body(
-				app.If(p.showMessages,
-					app.H6().Class("card-title").Text("Pending Requests"),
-					app.Div().Class("card-body").Body(
+				app.If(p.showMessages, func() app.UI {
+					return app.H6().Class("card-title").Text("Pending Requests")
+				}),
+				app.If(p.showMessages, func() app.UI { 
+					return app.Div().Class("card-body").Body(
 						app.Range(p.index).Slice(func(i int) app.UI {
 							i = p.index[i]
 							if p.demandRequests[strconv.Itoa(i)].ID > 0 && !p.demandRequests[strconv.Itoa(i)].Fulfilled {
@@ -558,8 +561,8 @@ func (p *pubsub) Render() app.UI {
 								)
 							}
 							return nil
-						})),
-				),
+					}))
+				}),
 				app.H6().Class("card-title").Text("What do you need today?"),
 				app.Div().Class("form-group").Body(
 					app.Select().Class("form-select").Aria("label", "Demand category").Body(
@@ -594,53 +597,55 @@ func (p *pubsub) Render() app.UI {
 				app.Button().ID("period-hour").Class("btn btn-outline-info period active").Text("1 Hour").Value(Hour).OnClick(p.onSelectPeriod),
 				app.Button().ID("my-stats").Class("btn btn-outline-info stats").Text("My Stats").Value("Personal").OnClick(p.onSelectStats),
 				app.Div().Class("content running").Body(
-					app.If(p.showRanks, app.Ol().Class("list-group list-group-numbered").Body(
-						app.Range(p.ranks).Slice(func(i int) app.UI {
-							var class string
-							if p.ranks[i].citizenID == p.citizenID {
-								class = "active"
-							}
-							if p.ranks[i].citizenID == "" {
-								return nil
-							}
+					app.If(p.showRanks, func() app.UI {
+						return app.Ol().Class("list-group list-group-numbered").Body(
+							app.Range(p.ranks).Slice(func(i int) app.UI {
+								var class string
+								if p.ranks[i].citizenID == p.citizenID {
+									class = "active"
+								}
+								if p.ranks[i].citizenID == "" {
+									return nil
+								}
 
-							return app.Li().Class("list-group-item "+class+" d-flex justify-content-between align-items-start").Body(
-								app.Div().Class("ms-2 me-auto").Body(
-									app.Div().Class("fw-bold").Text("Citizen"),
-									app.Span().Class("badge bg-primary rounded-pill").Text(p.ranks[i].citizenID),
-								),
-								app.Div().Class("ms-2 me-auto").Body(
-									app.Div().Class("fw-bold").Text("Demand"),
-									app.Span().Class("badge bg-primary rounded-pill").Text(p.ranks[i].demandRatio),
-								),
-								app.Div().Class("ms-2 me-auto").Body(
-									app.Div().Class("fw-bold").Text("Supply"),
-									app.Span().Class("badge bg-primary rounded-pill").Text(p.ranks[i].supplyRatio),
-								),
-								app.Div().Class("ms-2 me-auto").Body(
-									app.Div().Class("fw-bold").Text("Reputation"),
-									app.Span().Class("badge bg-primary rounded-pill").Text(p.ranks[i].reputationIndex),
-								),
-							)
-						}),
-					)),
-					app.If(p.showRatio,
-						app.Range(p.ratio).Slice(func(i int) app.UI {
+								return app.Li().Class("list-group-item "+class+" d-flex justify-content-between align-items-start").Body(
+									app.Div().Class("ms-2 me-auto").Body(
+										app.Div().Class("fw-bold").Text("Citizen"),
+										app.Span().Class("badge bg-primary rounded-pill").Text(p.ranks[i].citizenID),
+									),
+									app.Div().Class("ms-2 me-auto").Body(
+										app.Div().Class("fw-bold").Text("Demand"),
+										app.Span().Class("badge bg-primary rounded-pill").Text(p.ranks[i].demandRatio),
+									),
+									app.Div().Class("ms-2 me-auto").Body(
+										app.Div().Class("fw-bold").Text("Supply"),
+										app.Span().Class("badge bg-primary rounded-pill").Text(p.ranks[i].supplyRatio),
+									),
+									app.Div().Class("ms-2 me-auto").Body(
+										app.Div().Class("fw-bold").Text("Reputation"),
+										app.Span().Class("badge bg-primary rounded-pill").Text(p.ranks[i].reputationIndex),
+									),
+								)
+							}),
+						)
+					}),
+					app.If(p.showRatio, func() app.UI {
+						return app.Range(p.ratio).Slice(func(i int) app.UI {
 							return app.Div().Class("range").Style("top", strconv.Itoa(390-(p.ratio[i]*40))+"px").Style("left", "0").Body(
 								app.A().Href("#").Body(app.Small().Text("Supply/Demand Ratio: " + fmt.Sprintf("%.1f", float32(p.ratio[i])/10))),
 							)
-						}),
-					),
-					app.If(p.showTime,
-						app.Range(p.timeRange).Slice(func(i int) app.UI {
+						})
+					}),
+					app.If(p.showTime, func() app.UI {
+						return app.Range(p.timeRange).Slice(func(i int) app.UI {
 							return app.Div().Class("time").Style("top", "390px").Style("left", strconv.Itoa(p.timeRange[i]*p.multiplyer)+"px").Body(
 								app.A().Href("#").Body(app.Small().Text(p.timeFormat[i])),
 							)
-						}),
-					),
-					app.If(p.showChart,
-						app.If(len(p.filteredRequests) > 0,
-							app.Range(p.filteredRequests).Slice(func(i int) app.UI {
+						})
+					}),
+					app.If(p.showChart, func() app.UI {
+						return app.If(len(p.filteredRequests) > 0, func() app.UI {
+							return app.Range(p.filteredRequests).Slice(func(i int) app.UI {
 								if p.stats == "Personal" && p.demandRequests[strconv.Itoa(p.filteredRequests[i])].CitizenID != p.citizenID {
 									return nil
 								}
@@ -999,9 +1004,9 @@ func (p *pubsub) Render() app.UI {
 										app.Div().ID("line"+strconv.Itoa(p.filteredRequests[i])).Class("line").Style("-webkit-transform", "rotate("+fmt.Sprintf("%.2f", p.coordinates[len(p.coordinates)-1].angle)+"deg)").Style("-webkit-transform-origin", "0 0.25em").Style("-webkit-animation", "ball 1s linear forwards").Style("width", fmt.Sprintf("%.2f", p.coordinates[len(p.coordinates)-1].distance)+"px"),
 									)
 								}
-							}),
-						),
-					),
+							})
+						})
+					}),
 				),
 			),
 		),
@@ -1605,7 +1610,7 @@ func (p *pubsub) deleteRequests(ctx app.Context, e app.Event) {
 			p.ranks = make([]ranking, 0)
 			p.showMessages = false
 			p.showChart = false
-			p.Update()
+			// p.Update()
 		})
 	})
 }
@@ -2172,7 +2177,9 @@ func main() {
 	//
 	// This is done by calling the Route() function,  which tells go-app what
 	// component to display for a given path, on both client and server-side.
-	app.Route("/", &pubsub{})
+	app.Route("/", func() app.Composer{
+		return &pubsub{}
+	})
 
 	// Once the routes set up, the next thing to do is to either launch the app
 	// or the server that serves the app.
